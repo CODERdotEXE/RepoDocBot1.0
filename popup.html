@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="container">
+    <button id="signin-btn">Sign in with GitHub</button>
+    <div id="main-content" style="display: none;">
+      <button id="generate-readme">Generate README</button>
+      <div id="output">
+        <textarea id="readme-code" readonly></textarea>
+        <div id="preview"></div>
+        <button id="copy-btn">Copy README</button>
+      </div>
+      <div id="chat-interface">
+        <input type="text" id="chat-input" placeholder="Ask AI to make changes...">
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

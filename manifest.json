@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "ReadMe Genie",
+    "version": "1.0",
+    "description": "Generate and customize README.md files for your GitHub repositories using AI.",
+    "permissions": [
+      "identity",
+      "tabs",
+      "storage",
+      "activeTab",
+      "scripting",
+      "https://api.github.com/"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "assets/icon.png",
+        "48": "assets/icon.png",
+        "128": "assets/icon128.png"
+      }
+    },
+    "icons": {
+      "16": "assets/icon.png",
+      "48": "assets/icon.png",
+      "128": "assets/icon128.png"
+    },
+    "oauth2": {
+      "client_id": "Ov23lisRtmgtKH9wnSCQ",
+      "scopes": [
+        "repo",
+        "user"
+      ],
+      "redirect_uri": "https://localhost/callback"
+    },
+    "host_permissions": [
+      "https://*.github.com/"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://github.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
